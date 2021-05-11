@@ -1,5 +1,8 @@
 # AP location
 
+This an an api that will start up, and expect results to be published to the
+`/ap-location` endpoint.
+
 This is a FastAPI application that, including simple tests, and a Docker file
 to ensure the environment is correctly setup. The setup uses Gunicorn as the
 process manager and ASGI server (using uvicorn), with 2 cores set.
@@ -50,6 +53,9 @@ allows for decent processor performance, and prevents too many cache misses.
 
 It must be noted that caching is done per process - and not through a cache
 server like redis. It would be recommended to use a separate caching database.
+
+The `API_TOKEN` and `INDEX_THRESHOLD`are configurable through environment
+variables.
 
 ### Docker
 

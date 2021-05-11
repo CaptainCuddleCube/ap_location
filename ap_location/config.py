@@ -17,3 +17,4 @@ logger.setLevel(logging.INFO)
 
 API_TOKEN = environ.get("API_TOKEN")
 API_URL = "https://www.googleapis.com/geolocation/v1/geolocate"
+INDEX_THRESHOLD = environ.get("INDEX_THRESHOLD", -82)
